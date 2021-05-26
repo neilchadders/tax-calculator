@@ -1,25 +1,27 @@
 
-	
+
+const calculateButton = document.getElementById("btn");
 
 
-
-	
 
 function salaryCalculator(){
 
-	/*Main variables*/
+
+	/* Main variables*/
 	let salaryInput = document.getElementById("salary-input").value;
 	let taxDue = document.getElementById("tax-due");
 	let natIns = document.getElementById("nat-ins");
 	let netPay = document.getElementById("net-pay");
+	let salaryNumber = parseFloat(salaryInput);
 
-
-
-	/*Salary less than 15000*/	
+	let higherRateTax = 7000;
+	let higherRateNi = 4200;
+	
+	
+		/* Tax and NI for salary up to 15000*/
 	if (salaryNumber <= 15000){
 		netPay.innerHTML = salaryInput;
-
-		/* salary of 15000 - 50000*/
+		/* Tax and NI for salary of 15000 - 50000*/
 	} else if ( salaryInput > 15000 && salaryInput <= 50000){
 		let difference =  salaryNumber - 15000;
 		let tax = difference * 0.2;
@@ -30,7 +32,7 @@ function salaryCalculator(){
 		natIns.innerHTML = ni;
 		netPay.innerHTML = net;
 
-		/*Salary of 50000 plus*/
+		/* Tax and NI for salary of over 50000 */
 	} else if (salaryNumber > 50000){
 		let highDifference = salaryNumber - 50000;
 		let highTax = higherRateTax + (highDifference * 0.4);
@@ -42,4 +44,7 @@ function salaryCalculator(){
 		netPay.innerHTML = highNet;
 	}
 
+
 }
+
+calculateButton.onclick = salaryCalculator;
