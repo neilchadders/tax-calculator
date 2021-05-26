@@ -25,3 +25,9 @@ td {
 	font-family:  "Arial";
 
 }
+
+button{
+	margin: 2%;
+	padding:1%;
+	font-size: 1em;
+}

@@ -41,9 +41,9 @@ function salaryCalculator(){
 		let ni = difference * basicNi;
 		let net = salaryNumber - (tax + ni); 
 
-		taxDue.innerHTML = tax;
-		natIns.innerHTML = ni;
-		netPay.innerHTML = net;
+		taxDue.innerHTML = tax.toFixed(2);
+		natIns.innerHTML = ni.toFixed(2);
+		netPay.innerHTML = net.toFixed(2);
 
 
 		/* Tax and NI for salary of over 50000 */
@@ -53,9 +53,9 @@ function salaryCalculator(){
 		let highNi = higherRateNi + (highDifference * upperNi);
 		let highNet = salaryNumber - (highTax + highNi);
 
-		taxDue.innerHTML = highTax;
-		natIns.innerHTML = highNi;
-		netPay.innerHTML = highNet;
+		taxDue.innerHTML = highTax.toFixed(2);
+		natIns.innerHTML = highNi.toFixed(2);
+		netPay.innerHTML = highNet.toFixed(2);
 	}
 
 
