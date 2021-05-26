@@ -1,0 +1,27 @@
+body {
+  font-family: "Arial", sans-serif;	
+  margin: 2em;
+
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  
+}
+
+
+th, tbody{
+	border:solid 5px;
+	padding:  1%;
+	text-align: center;
+
+}
+
+td {
+	border:solid 5px;
+	padding: 1%;
+	font-family:  "Arial";
+
+}
