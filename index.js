@@ -1,6 +1,7 @@
 
 
 const calculateButton = document.getElementById("btn");
+const clear = document.getElementById("clear").addEventListener("click", startAgain);
 
 
 
@@ -61,3 +62,9 @@ function salaryCalculator(){
 }
 
 calculateButton.onclick = salaryCalculator;
+
+function startAgain () {
+ 
+ window.location.reload();
+
+}
